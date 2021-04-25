@@ -1,0 +1,20 @@
+{
+    "allColors": [
+        {
+            "colorName": "black",
+            "colorValue": "0 0 0"
+        },
+        {
+            "colorName": "red",
+            "colorValue": "1 0 0"
+        },
+        {
+            "colorName": "green",
+            "colorValue": "0 1 0"
+        },
+        {
+            "colorName": "blue",
+            "colorValue": "0 0 1"
+        }
+    ]
+}
