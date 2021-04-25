@@ -10,30 +10,70 @@ public class DefineBorders : MonoBehaviour
     private static float height;
     private static float width;
     private static float aspectRatious;
-    private static float widthOffset = 4f;
 
-    void Start()
-    {
+    private const float topOffsetValue = 0.2f;
+    private const float bottomOffsetValue = 0.4f;
+
+    private static float topOffset = 0;
+    private static float bottomOffset = 0;
+
+    public static bool[,] matrix;
+
+
+    void Start() {
+
         height = mainCamera.orthographicSize * 2;
         aspectRatious = mainCamera.aspect;
         width = Mathf.Round(height * aspectRatious);
         GameZone.Init();
+        //GameZone.ShowGameFieldsParameters();
     }
 
-    public static class GameZone
-    {
+    public static class GameZone {
+
         public static Rect gameField;
         public static float startHeight, endHeight, startWidth, endWidth;
 
-        public static void Init()
-        {
+        public static Rect gameFieldWithOffset;
+
+        public static void Init() {
+
+            CalculateParameters();
+            CalculateOffsets();
+            InitializeGameFields();
+            //InitializeMatrix();
+        }
+
+        public static void ShowGameFieldsParameters() {
+            Debug.Log($"Start width: {startWidth}, end width: {endWidth}, start height: {startHeight}, endHeight: {endHeight}, gameField: {gameField.ToString()}; topOffset: {topOffset}; bottomOffset: {bottomOffset}; gameFieldWithOffest: {gameFieldWithOffset.ToString()}");
+        }
+
+        private static void CalculateOffsets() {
+
+            topOffset = endHeight - (endHeight * topOffsetValue);
+            bottomOffset = startHeight -(startHeight * bottomOffsetValue);
+        }
+
+        private static void CalculateParameters() {
+
             endHeight = (height / 2);
             startHeight = -endHeight;
 
-            endWidth = Mathf.Floor(width / widthOffset);
+            endWidth = (width / 2);
             startWidth = -endWidth;
-
-            gameField = new Rect(startWidth, startHeight, endWidth, endHeight); 
         }
+
+        private static void InitializeGameFields() {
+
+            gameField = new Rect(startWidth, startHeight, endWidth, endHeight);
+            gameFieldWithOffset = new Rect(startWidth, bottomOffset, endWidth, topOffset);
+        }
+
+        private static void InitializeMatrix() {
+            matrix = new bool[(int)gameFieldWithOffset.height * 2, (int)gameFieldWithOffset.width * 2];
+        }
+
+        
     }
+
 }
