@@ -32,7 +32,11 @@ public class BlockView : MonoBehaviour
         return new Color(redColor, greenColor, blueColor);
     }
 
-    public void setPosition(Block block) {
-        this.transform.position = new Vector2(block.columnIndex, block.rowIndex);
+    public void setPosition(Block block, float columnValue) {
+        this.transform.position = new Vector2(columnValue, block.rowIndex);
+    }
+
+    public void blockScale(float scale) {
+        this.transform.localScale *= scale;
     }
 }
