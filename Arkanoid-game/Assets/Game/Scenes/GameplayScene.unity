@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &88533147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6452372796249462529, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+    type: 3}
+  m_PrefabInstance: {fileID: 298780364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &88533150 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6452372796249462589, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+    type: 3}
+  m_PrefabInstance: {fileID: 298780364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &298780364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,6 +146,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452372796249462589, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452372796249462589, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: eee06bda713d6d34cab47f9d3bbef858, type: 2}
+    - target: {fileID: 6452372796249462590, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6452372796249462591, guid: 50931dd3a4ff8aa48b088ebd33612f44,
         type: 3}
@@ -190,6 +217,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8273990947113686110, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+        type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 88533147}
+    - target: {fileID: 8273990947113686110, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+        type: 3}
+      propertyPath: speed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273990947113686110, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+        type: 3}
+      propertyPath: ballRigidBody
+      value: 
+      objectReference: {fileID: 88533150}
+    - target: {fileID: 8273990947113686110, guid: 50931dd3a4ff8aa48b088ebd33612f44,
+        type: 3}
+      propertyPath: platformPosition
+      value: 
+      objectReference: {fileID: 1083509117}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50931dd3a4ff8aa48b088ebd33612f44, type: 3}
 --- !u!1 &895032947

@@ -22,7 +22,7 @@ public class BallMovement : MonoBehaviour
     void Update() {
         
         if (Input.GetKeyDown(KeyCode.Space)) {
-            pushBall(60);
+            pushBall();
         }
         else if(!isMoveBanMove) {
             moveOnPlatform();
@@ -33,13 +33,12 @@ public class BallMovement : MonoBehaviour
         this.transform.position = new Vector3(platformPosition.transform.position.x, platformPosition.transform.position.y + ballOffset, 0);
     }
 
-    void pushBall(float angle) {
+    void pushBall() {
         isMoveBanMove = true;
 
-        var acceleration = new Vector2
-        {
-            x = speed * Mathf.Cos(angle * Mathf.Deg2Rad),
-            y = speed * Mathf.Sin(angle * Mathf.Deg2Rad)
+        Vector2 acceleration = new Vector2() {
+            x = speed * Random.Range(DefineBorders.GameZone.startWidth, DefineBorders.GameZone.endWidth),
+            y = speed * Random.Range(DefineBorders.GameZone.endHeight / 2, DefineBorders.GameZone.endHeight)
         };
 
         ballRigidBody.AddForce(acceleration);
