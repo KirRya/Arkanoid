@@ -9,6 +9,12 @@ public class BlockView : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public static float startRow;
+    public static float startColumn;
+
+    private const float rowIncreaseValue = 0.3f;
+    public static float columnIncreaseValue;
+
     void Start() {
         spriteRenderer = prefab.GetComponent<SpriteRenderer>();
     }
@@ -32,11 +38,24 @@ public class BlockView : MonoBehaviour
         return new Color(redColor, greenColor, blueColor);
     }
 
-    public void setPosition(Block block, float columnValue) {
-        this.transform.position = new Vector2(columnValue, block.rowIndex);
+    public void setPosition(Block block) {
+
+        float columnValue = block.columnIndex * columnIncreaseValue;
+        float rowValue = block.rowIndex * rowIncreaseValue;
+
+        float columnPosition = startColumn + columnValue;
+        float rowPosition = startRow - rowValue;
+
+        this.transform.position = new Vector2(columnPosition, rowPosition);
     }
 
     public void blockScale(float scale) {
         this.transform.localScale *= scale;
+    }
+
+    public void InitBlocks(float _scaleValue) {
+        startColumn = DefineBorders.GameZone.startWidth + 1;
+        startRow = DefineBorders.topOffset - 1;
+        columnIncreaseValue = _scaleValue;
     }
 }

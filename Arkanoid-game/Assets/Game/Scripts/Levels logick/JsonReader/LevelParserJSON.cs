@@ -20,9 +20,11 @@ public class LevelParserJSON : MonoBehaviour
 
     private Colors[] allColors;
 
+    [SerializeField]
+    private string currentLevelName;
+
     void Start() {
-        string levelName = "level1.json";
-        Level level1 = levelReader(levelName);
+        Level level1 = levelReader(currentLevelName);
 
         string jsonColorsQuery = colorReader();
 

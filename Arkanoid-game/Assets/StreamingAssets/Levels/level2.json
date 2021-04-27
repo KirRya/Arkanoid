@@ -4,7 +4,7 @@
     "blocks": [
         {
             "columnIndex": 0,
-            "rowIndex": 1,
+            "rowIndex": 0,
             "type": "block",
             "colorName": "red"
         },
@@ -16,31 +16,31 @@
         },
         {
             "columnIndex": 2,
-            "rowIndex": 1,
+            "rowIndex": 2,
             "type": "block",
             "colorName": "black"
         },
         {
             "columnIndex": 3,
-            "rowIndex": 1,
+            "rowIndex": 3,
             "type": "block",
             "colorName": "red"
         },
         {
             "columnIndex": 4,
-            "rowIndex": 1,
+            "rowIndex": 4,
             "type": "block",
             "colorName": "green"
         },
         {
             "columnIndex": 5,
-            "rowIndex": 1,
+            "rowIndex": 5,
             "type": "block",
             "colorName": "black"
         },
         {
             "columnIndex": 6,
-            "rowIndex": 1,
+            "rowIndex": 6,
             "type": "block",
             "colorName": "red"
         }

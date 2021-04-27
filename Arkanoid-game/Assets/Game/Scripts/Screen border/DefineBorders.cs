@@ -14,8 +14,8 @@ public class DefineBorders : MonoBehaviour
     private const float topOffsetValue = 0.2f;
     private const float bottomOffsetValue = 0.4f;
 
-    private static float topOffset = 0;
-    private static float bottomOffset = 0;
+    public static float topOffset = 0;
+    public static float bottomOffset = 0;
 
     public static bool[,] matrix;
 
@@ -26,7 +26,6 @@ public class DefineBorders : MonoBehaviour
         aspectRatious = mainCamera.aspect;
         width = Mathf.Round(height * aspectRatious);
         GameZone.Init();
-        //GameZone.ShowGameFieldsParameters();
     }
 
     public static class GameZone {
@@ -41,7 +40,6 @@ public class DefineBorders : MonoBehaviour
             CalculateParameters();
             CalculateOffsets();
             InitializeGameFields();
-            //InitializeMatrix();
         }
 
         public static void ShowGameFieldsParameters() {
@@ -67,13 +65,7 @@ public class DefineBorders : MonoBehaviour
 
             gameField = new Rect(startWidth, startHeight, endWidth, endHeight);
             gameFieldWithOffset = new Rect(startWidth, bottomOffset, endWidth, topOffset);
-        }
-
-        private static void InitializeMatrix() {
-            matrix = new bool[(int)gameFieldWithOffset.height * 2, (int)gameFieldWithOffset.width * 2];
-        }
-
-        
+        }  
     }
 
 }
