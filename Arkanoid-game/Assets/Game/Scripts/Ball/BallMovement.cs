@@ -19,6 +19,7 @@ public class BallMovement : MonoBehaviour
 
     private bool isMoveBanMove = false;
 
+
     void Update() {
         
         if (Input.GetKeyDown(KeyCode.Space) && !isMoveBanMove) {
@@ -26,6 +27,10 @@ public class BallMovement : MonoBehaviour
         }
         else if(!isMoveBanMove) {
             moveOnPlatform();
+        }
+        else
+        {
+            move();
         }
     }
 
@@ -48,5 +53,30 @@ public class BallMovement : MonoBehaviour
         if(collision.gameObject.name == "blockPrefab(Clone)") {
             collision.gameObject.SetActive(false);
         }
+    }
+
+    private void move() {
+
+        Vector3 moveVector = new Vector3();
+
+        if (ball.transform.position.y > DefineBorders.GameZone.endHeight)
+        {
+            moveVector = Vector3.Reflect(ball.transform.position, Vector3.down * 2);
+            ballRigidBody.AddForce(moveVector);
+        }
+        else if (ball.transform.position.x < DefineBorders.GameZone.startWidth)
+        {
+            moveVector = Vector3.Reflect(ball.transform.position, Vector3.right * 2);
+            ballRigidBody.AddForce(moveVector);
+        }
+        else if (ball.transform.position.x > DefineBorders.GameZone.endWidth)
+        {
+            moveVector = Vector3.Reflect(ball.transform.position, Vector3.left * 2);
+            ballRigidBody.AddForce(moveVector);
+        }
+        else if (ball.transform.position.y < DefineBorders.GameZone.startHeight)
+            Debug.Log("DEAD");
+
+
     }
 }
