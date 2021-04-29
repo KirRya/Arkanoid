@@ -23,14 +23,10 @@ public class BallMovement : MonoBehaviour
     void Update() {
         
         if (Input.GetKeyDown(KeyCode.Space) && !isMoveBanMove) {
-            pushBall(90);
+            pushBall(60);
         }
         else if(!isMoveBanMove) {
             moveOnPlatform();
-        }
-        else
-        {
-            //move();
         }
     }
 
@@ -50,8 +46,11 @@ public class BallMovement : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.name == "blockPrefab(Clone)") {
+        if (collision.gameObject.name == "blockPrefab(Clone)") {
             collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.name == "BottomBound") {
+            ballRigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
         }
     }
 

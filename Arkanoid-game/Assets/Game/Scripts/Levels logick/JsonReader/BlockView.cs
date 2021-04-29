@@ -12,7 +12,7 @@ public class BlockView : MonoBehaviour
     public static float startRow;
     public static float startColumn;
 
-    private const float rowIncreaseValue = 0.3f;
+    public const float rowIncreaseValue = 0.3f;
     public static float columnIncreaseValue;
 
     void Start() {
