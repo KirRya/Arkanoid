@@ -88,6 +88,5 @@ public class BallMovement : MonoBehaviour
     public void defineSpeed(int blocksCount)
     {
         increaseSpeedValue = maximumSpeedDefault / blocksCount;
-        Debug.Log("VALUE - " + increaseSpeedValue);
     }
 }

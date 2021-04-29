@@ -7,6 +7,9 @@ public class LevelCreator : MonoBehaviour
     private float scaleValue;
     private const int normalBlockColumnsAmount = 5;
 
+    [SerializeField]
+    private HealthSystem healthSystem;
+
     public void createLevel(Level currentLevel, BlockView blockViewPrefab, Colors[] allColors) {
 
         DefineBorders.matrix = new bool[currentLevel.rowsCounts, currentLevel.columnsCounts];
@@ -27,6 +30,9 @@ public class LevelCreator : MonoBehaviour
                 block.prefab.SetActive(true);
             }
         }
+
+
+        healthSystem.Init();
     }
 
 
