@@ -12,15 +12,20 @@ public class HealthSystem : MonoBehaviour
 
     private const float offset = 0.5f;
 
+    [SerializeField]
+    private GameObject pool;
+
+    private int hearthsIndex;
+
     private void setPosition(GameObject _health)
     {
         _health.transform.position = new Vector3(startPositionX, startPositionY);
-        startPositionX -= (offset * 2);
+        startPositionX -= (float)(offset * 1.25);
     }
 
     public void Init()
     {
-
+        hearthsIndex = healthCount - 1;
         setStartPosition();
 
         for (int i = 0; i < healthCount; i++) {
@@ -32,11 +37,19 @@ public class HealthSystem : MonoBehaviour
                 health.SetActive(true);
             }
         }
+
+        //decreaseHearth();
     }
 
     private void setStartPosition()
     {
         startPositionX = DefineBorders.GameZone.endWidth - (offset);
         startPositionY = DefineBorders.GameZone.endHeight - offset;
+    }
+
+    public void decreaseHearth() {
+        GameObject tmp = pool.gameObject.transform.GetChild(hearthsIndex).gameObject;
+        tmp.SetActive(false);
+        hearthsIndex--;
     }
 }

@@ -8,7 +8,7 @@ public class LevelCreator : MonoBehaviour
     private const int normalBlockColumnsAmount = 5;
 
     [SerializeField]
-    private HealthSystem healthSystem;
+    public HealthSystem healthSystem;
 
     public void createLevel(Level currentLevel, BlockView blockViewPrefab, Colors[] allColors) {
 

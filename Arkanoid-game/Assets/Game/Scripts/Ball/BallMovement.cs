@@ -26,6 +26,20 @@ public class BallMovement : MonoBehaviour
     private const float maximumSpeedDefault = 500;
     public float increaseSpeedValue;
 
+
+    [SerializeField]
+    LevelCreator healthSystemHelper;
+
+    HealthSystem healthSystem;
+
+    [SerializeField]
+    GameObject hearthsPool;
+
+    private void Start()
+    {
+        healthSystem = healthSystemHelper.healthSystem;
+    }
+
     void Update() {
         
         if (Input.GetKeyDown(KeyCode.Space) && !isMoveBanMove) {
@@ -59,34 +73,19 @@ public class BallMovement : MonoBehaviour
         }
         if (collision.gameObject.name == "BottomBound") {
             ballRigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
+            Restart();
         }
-    }
-
-    private void move() {
-
-        Vector3 moveVector = new Vector3();
-
-        if (ball.transform.position.y > DefineBorders.GameZone.endHeight)
-        {
-            moveVector = Vector3.Reflect(ball.transform.position, Vector3.down * 2);
-            ballRigidBody.AddForce(moveVector);
-        }
-        else if (ball.transform.position.x < DefineBorders.GameZone.startWidth)
-        {
-            moveVector = Vector3.Reflect(ball.transform.position, Vector3.right * 2);
-            ballRigidBody.AddForce(moveVector);
-        }
-        else if (ball.transform.position.x > DefineBorders.GameZone.endWidth)
-        {
-            moveVector = Vector3.Reflect(ball.transform.position, Vector3.left);
-            ballRigidBody.AddForce(moveVector);
-        }
-        else if (ball.transform.position.y < DefineBorders.GameZone.startHeight)
-            Debug.Log("DEAD");
     }
 
     public void defineSpeed(int blocksCount)
     {
         increaseSpeedValue = maximumSpeedDefault / blocksCount;
+    }
+
+    private void Restart() {
+        healthSystem.decreaseHearth();
+
+        ballRigidBody.constraints = RigidbodyConstraints2D.None;
+        isMoveBanMove = false;
     }
 }
