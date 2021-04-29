@@ -23,6 +23,10 @@ public class LevelParserJSON : MonoBehaviour
     [SerializeField]
     private string currentLevelName;
 
+
+    [SerializeField]
+    private BallMovement ball;
+
     void Start() {
         Level level1 = levelReader(currentLevelName);
 
@@ -31,6 +35,8 @@ public class LevelParserJSON : MonoBehaviour
         allColors = JsonHelper.FromJson<Colors>(jsonColorsQuery);
 
         levelCreator.createLevel(level1, blockView, allColors);
+
+        ball.defineSpeed(level1.blocks.Length);
     }
 
     private Level levelReader(string levelName) {

@@ -22,7 +22,9 @@ public class BallMovement : MonoBehaviour
     [SerializeField]
     public GameObject effect;
 
-    private Color effectColor;
+
+    private const float maximumSpeedDefault = 500;
+    public float increaseSpeedValue;
 
     void Update() {
         
@@ -53,6 +55,7 @@ public class BallMovement : MonoBehaviour
         if (collision.gameObject.name == "blockPrefab(Clone)") {
             collision.gameObject.SetActive(false);
             Instantiate(effect, transform.position, Quaternion.identity);
+            ballRigidBody.AddForce(new Vector2(increaseSpeedValue, 0), 0);
         }
         if (collision.gameObject.name == "BottomBound") {
             ballRigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
@@ -80,7 +83,11 @@ public class BallMovement : MonoBehaviour
         }
         else if (ball.transform.position.y < DefineBorders.GameZone.startHeight)
             Debug.Log("DEAD");
+    }
 
-
+    public void defineSpeed(int blocksCount)
+    {
+        increaseSpeedValue = maximumSpeedDefault / blocksCount;
+        Debug.Log("VALUE - " + increaseSpeedValue);
     }
 }
