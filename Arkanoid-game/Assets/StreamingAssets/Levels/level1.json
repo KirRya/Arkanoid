@@ -31,6 +31,36 @@
             "rowIndex": 0,
             "type": "block",
             "colorName": "black"
+        },
+        {
+            "columnIndex": 0,
+            "rowIndex": 2,
+            "type": "block",
+            "colorName": "black"
+        },
+        {
+            "columnIndex": 2,
+            "rowIndex": 2,
+            "type": "block",
+            "colorName": "red"
+        },
+        {
+            "columnIndex": 4,
+            "rowIndex": 2,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 3,
+            "rowIndex": 3,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 1,
+            "rowIndex": 3,
+            "type": "block",
+            "colorName": "black"
         }
     ]
 }
