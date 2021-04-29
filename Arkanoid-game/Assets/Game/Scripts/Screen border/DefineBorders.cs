@@ -7,8 +7,8 @@ public class DefineBorders : MonoBehaviour
     [SerializeField]
     private Camera mainCamera;
 
-    private static float height;
-    private static float width;
+    public static float height;
+    public static float width;
     private static float aspectRatious;
 
     private const float topOffsetValue = 0.2f;

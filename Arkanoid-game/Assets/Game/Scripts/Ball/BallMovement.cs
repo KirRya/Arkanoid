@@ -30,7 +30,7 @@ public class BallMovement : MonoBehaviour
         }
         else
         {
-            move();
+            //move();
         }
     }
 
@@ -71,7 +71,7 @@ public class BallMovement : MonoBehaviour
         }
         else if (ball.transform.position.x > DefineBorders.GameZone.endWidth)
         {
-            moveVector = Vector3.Reflect(ball.transform.position, Vector3.left * 2);
+            moveVector = Vector3.Reflect(ball.transform.position, Vector3.left);
             ballRigidBody.AddForce(moveVector);
         }
         else if (ball.transform.position.y < DefineBorders.GameZone.startHeight)

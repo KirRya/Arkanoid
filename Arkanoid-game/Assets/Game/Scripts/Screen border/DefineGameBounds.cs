@@ -9,7 +9,8 @@ public class DefineGameBounds : MonoBehaviour
 
     void Start()
     {
-        
+        boundaries.transform.position = new Vector3(DefineBorders.GameZone.startWidth, 0, 0);
+        boundaries.GetComponent<BoxCollider2D>().size = new Vector2(0.2f, DefineBorders.height);
     }
 
     private void InitBounds() {
