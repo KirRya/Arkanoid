@@ -19,6 +19,10 @@ public class BallMovement : MonoBehaviour
 
     private bool isMoveBanMove = false;
 
+    [SerializeField]
+    public GameObject effect;
+
+    private Color effectColor;
 
     void Update() {
         
@@ -48,6 +52,7 @@ public class BallMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.name == "blockPrefab(Clone)") {
             collision.gameObject.SetActive(false);
+            Instantiate(effect, transform.position, Quaternion.identity);
         }
         if (collision.gameObject.name == "BottomBound") {
             ballRigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
