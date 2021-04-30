@@ -24,25 +24,193 @@
             "columnIndex": 3,
             "rowIndex": 3,
             "type": "block",
-            "colorName": "red"
+            "colorName": "blue"
         },
         {
             "columnIndex": 4,
             "rowIndex": 4,
             "type": "block",
-            "colorName": "green"
+            "colorName": "red"
         },
         {
             "columnIndex": 5,
             "rowIndex": 5,
             "type": "block",
-            "colorName": "black"
+            "colorName": "green"
         },
         {
             "columnIndex": 6,
             "rowIndex": 6,
             "type": "block",
+            "colorName": "black"
+        },
+        {
+            "columnIndex": 0,
+            "rowIndex": 1,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 0,
+            "rowIndex": 2,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 0,
+            "rowIndex": 3,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 0,
+            "rowIndex": 4,
+            "type": "block",
             "colorName": "red"
+        },
+        {
+            "columnIndex": 0,
+            "rowIndex": 5,
+            "type": "block",
+            "colorName": "black"
+        },
+        {
+            "columnIndex": 0,
+            "rowIndex": 6,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 6,
+            "rowIndex": 0,
+            "type": "block",
+            "colorName": "red"
+        },
+        {
+            "columnIndex": 6,
+            "rowIndex": 1,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 6,
+            "rowIndex": 2,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 6,
+            "rowIndex": 3,
+            "type": "block",
+            "colorName": "black"
+        },
+        {
+            "columnIndex": 6,
+            "rowIndex": 4,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 6,
+            "rowIndex": 5,
+            "type": "block",
+            "colorName": "red"
+        },
+        {
+            "columnIndex": 1,
+            "rowIndex": 0,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 2,
+            "rowIndex": 0,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 3,
+            "rowIndex": 0,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 4,
+            "rowIndex": 0,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 5,
+            "rowIndex": 0,
+            "type": "block",
+            "colorName": "black"
+        },
+        {
+            "columnIndex": 6,
+            "rowIndex": 0,
+            "type": "block",
+            "colorName": "red"
+        },
+        {
+            "columnIndex": 6,
+            "rowIndex": 6,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 1,
+            "rowIndex": 5,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 2,
+            "rowIndex": 4,
+            "type": "block",
+            "colorName": "red"
+        },
+        {
+            "columnIndex": 4,
+            "rowIndex": 2,
+            "type": "block",
+            "colorName": "black"
+        },
+        {
+            "columnIndex": 5,
+            "rowIndex": 1,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 1,
+            "rowIndex": 6,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 2,
+            "rowIndex": 6,
+            "type": "block",
+            "colorName": "red"
+        },
+        {
+            "columnIndex": 3,
+            "rowIndex": 6,
+            "type": "block",
+            "colorName": "green"
+        },
+        {
+            "columnIndex": 4,
+            "rowIndex": 6,
+            "type": "block",
+            "colorName": "blue"
+        },
+        {
+            "columnIndex": 5,
+            "rowIndex": 6,
+            "type": "block",
+            "colorName": "black"
         }
     ]
 }

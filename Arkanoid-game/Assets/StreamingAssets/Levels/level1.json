@@ -6,49 +6,49 @@
             "columnIndex": 0,
             "rowIndex": 0,
             "type": "block",
-            "colorName": "black"
+            "colorName": "blue"
         },
         {
             "columnIndex": 1,
             "rowIndex": 1,
             "type": "block",
-            "colorName": "red"
+            "colorName": "green"
         },
         {
             "columnIndex": 2,
             "rowIndex": 0,
             "type": "block",
-            "colorName": "blue"
+            "colorName": "red"
         },
         {
             "columnIndex": 3,
             "rowIndex": 1,
             "type": "block",
-            "colorName": "green"
+            "colorName": "black"
         },
         {
             "columnIndex": 4,
             "rowIndex": 0,
             "type": "block",
-            "colorName": "black"
+            "colorName": "red"
         },
         {
             "columnIndex": 0,
             "rowIndex": 2,
             "type": "block",
-            "colorName": "black"
+            "colorName": "blue"
         },
         {
             "columnIndex": 2,
             "rowIndex": 2,
             "type": "block",
-            "colorName": "red"
+            "colorName": "black"
         },
         {
             "columnIndex": 4,
             "rowIndex": 2,
             "type": "block",
-            "colorName": "blue"
+            "colorName": "red"
         },
         {
             "columnIndex": 3,
@@ -60,7 +60,7 @@
             "columnIndex": 1,
             "rowIndex": 3,
             "type": "block",
-            "colorName": "black"
+            "colorName": "blue"
         }
     ]
 }

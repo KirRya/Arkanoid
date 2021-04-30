@@ -37,8 +37,6 @@ public class HealthSystem : MonoBehaviour
                 health.SetActive(true);
             }
         }
-
-        //decreaseHearth();
     }
 
     private void setStartPosition()

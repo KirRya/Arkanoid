@@ -35,6 +35,9 @@ public class BallMovement : MonoBehaviour
     [SerializeField]
     GameObject hearthsPool;
 
+
+    private float randomAngle;
+
     private void Start()
     {
         healthSystem = healthSystemHelper.healthSystem;
@@ -43,7 +46,8 @@ public class BallMovement : MonoBehaviour
     void Update() {
         
         if (Input.GetKeyDown(KeyCode.Space) && !isMoveBanMove) {
-            pushBall(60);
+            randomAngle = Random.Range(60, 120);
+            pushBall(randomAngle);
         }
         else if(!isMoveBanMove) {
             moveOnPlatform();
